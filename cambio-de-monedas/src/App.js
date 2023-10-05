@@ -13,12 +13,12 @@ function App() {
 
   const cambiarDolar = (dolares) => {
     const pesosC = dolares * DolarPeso;
-    return pesosC;
+    return pesosC.toFixed(2);
   };
 
   const cambiarPesos = (pesos) => {
     const dolares = pesos / DolarPeso;
-    return dolares;
+    return dolares.toFixed(2);
   };
 
   const solicitarCantidad = (tipo) => {
@@ -30,7 +30,7 @@ function App() {
   const handleOptionSelect = (selectedOption) => {
     setOpcion(selectedOption);
     setResultado(null);
-    setTipoMoneda(selectedOption === 1 ? 'Pesos Colombianos' : 'Dolares');
+    setTipoMoneda(selectedOption === 1 ? 'Dolares' : 'Pesos Colombianos');
   };
 
   const handleCambio = (cantidad) => {
@@ -42,6 +42,11 @@ function App() {
       setResultado(dolares);
     }
   };
+
+  const handleSalir = () => {
+    alert("¡Gracias!");
+    setOpcion(null);
+  }
 
   return (
     <div className="App">
