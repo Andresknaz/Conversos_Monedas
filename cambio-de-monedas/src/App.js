@@ -3,6 +3,8 @@ import Menu from './Menu';
 import CambioMoneda from './CambioMoneda';
 import Resultado from './Resultado';
 import './Styles.css'
+
+
 const DolarPeso = 4348;
 
 function App() {
@@ -30,7 +32,7 @@ function App() {
   const handleOptionSelect = (selectedOption) => {
     setOpcion(selectedOption);
     setResultado(null);
-    setTipoMoneda(selectedOption === 1 ? 'Dolares' : 'Pesos Colombianos');
+    setTipoMoneda(selectedOption === 1 ? 'Pesos Colombianos' : 'Dolares');
   };
 
   const handleCambio = (cantidad) => {
