@@ -3,7 +3,7 @@ import Menu from './Menu';
 import CambioMoneda from './CambioMoneda';
 import Resultado from './Resultado';
 import './Styles.css'
-const DolarPeso = 4.348;
+const DolarPeso = 4348;
 
 function App() {
   const [opcion, setOpcion] = useState(null);
