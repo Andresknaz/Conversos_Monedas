@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-
+//import { BrowserRouter, Route, Router, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
+import './Styles.css';
 
 
 function CambioMoneda({ tipo, onCambio }){
     const [cantidad, setCantidad] = useState('');
-
+    const history = useHistory();
 
     const handleChange = (e) => {
         setCantidad(e.target.value);
@@ -15,7 +17,9 @@ function CambioMoneda({ tipo, onCambio }){
         onCambio(parseFloat(cantidad));
     };
 
-   
+   const regresarAMenu = () => {
+     history.push('/')
+   };
 
     return (
         <div>
@@ -26,7 +30,7 @@ function CambioMoneda({ tipo, onCambio }){
                     <input type="number" step="0.01" value={cantidad} onChange={handleChange} />
                 </label>
                 <button type="submit">Calcular</button>
-               
+                <button onClick={regresarAMenu}>Volver al menú</button>
             </form>
         </div>
     );

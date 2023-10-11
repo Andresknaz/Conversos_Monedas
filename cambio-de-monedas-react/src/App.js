@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+//import { BrowserRouter, Route, Router, useHistory } from 'react-router-dom';
+//import { useHistory } from 'react-router-dom';
 import Menu from './Menu';
 import CambioMoneda from './CambioMoneda';
 import Resultado from './Resultado';
 
-import './Styles.css'
+import './Styles.css';
 
 
 const DolarPeso = 4348;
